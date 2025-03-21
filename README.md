@@ -20,3 +20,5 @@ Domande da farsi quando si crea una funzione:
 2. Ho bisogno di parametri?
 3. Devo restituire un valore?
 4. Se sì, di che tipo?
+
+DONE
