@@ -1,7 +1,7 @@
 /* ******************************************** */
 /*                  PALINDROMA                  */
 /* ******************************************** */
-
+// inizio funzione checkPalindrome
 // definisco la funzione per capire se la parola è palindroma
 function checkPalindrome(word){
   // creo un array vuoto per la parola inserita dall'utente
@@ -32,12 +32,41 @@ function checkPalindrome(word){
 } 
 // fine funzione
 
-
+console.log("###### PALINDROMA ######");
 // definisco la variabile userWord e le assegno un valore immesso dall'utente
 let userWord = prompt("Inserisci la parola da controllare.");
-// stampa di controllo per userWord
-console.log(userWord);
 
 // chiamo la funzione checkPalindrome per userWord
 checkPalindrome(userWord);
+
+
+
+/* ******************************************** */
+/*                PARI E DISPARI                */
+/* ******************************************** */
+console.log("###### PARI E DISPARI ######")
+// definisco la funzione genNum per generare un numero random in un intervallo
+function genNum(min, max){
+  let pcNum = Math.floor(Math.random() * (max - min + 1) + min);
+  console.log("Il computer ha fatto:", pcNum);
+
+  return pcNum;
+}
+
+// definisco la funzione evenVsOdd per stabilire se la somma dei numeri dell'utente e del computer sono pari o dispari
+
+// chiedo all'utente di scegliere pari o dispari
+let userChoice = prompt("Scegli pari o dispari");
+userChoice = userChoice.toLowerCase();
+console.log("Hai scelto;", userChoice);
+// chiedo all'utente un numero da 1 a 5 e assegno il risultato a una variabile
+let userNum = parseInt(prompt("Inserisci un numero"));
+console.log("Hai fatto;", userNum);
+// chiamo la funzione genNum per i numeri da 1 a 5 e assegno il risultato a una variabile
+let pcNum = genNum(1,5);
+// chiamo la funzione evenVsOdd per stabilire se la somma dei numeri è pari o dispari
+// dichiaro chi ha vinto
+
+
+
 
