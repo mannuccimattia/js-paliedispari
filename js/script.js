@@ -72,12 +72,24 @@ function evenVsOdd(numA, numB){
 }
 
 // chiedo all'utente di scegliere pari o dispari
-let userChoice = prompt("Scegli pari o dispari");
-userChoice = userChoice.toLowerCase();
-console.log("Hai scelto:", userChoice);
+let userChoice = prompt("Scegli pari o dispari").toLowerCase();
+if(userChoice !== "pari" && userChoice !== "dispari"){
+  userChoice = prompt("Valore non valido. Inserisci pari o dispari").toLowerCase();
+  console.log("Hai scelto:", userChoice);
+}
+else{
+  console.log("Hai scelto:", userChoice);
+}
+
 // chiedo all'utente un numero da 1 a 5 e assegno il risultato a una variabile
-let userNum = parseInt(prompt("Inserisci un numero"));
+let userNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
+if(userNum < 1 || userNum > 5){
+userNum = parseInt(prompt("Numero non valido. Inserisci un numero da 1 a 5")) 
 console.log("Hai fatto:", userNum);
+}
+else{
+  console.log("Hai fatto:", userNum);
+}
 // chiamo la funzione genNum per i numeri da 1 a 5 e assegno il risultato a una variabile
 let pcNum = genNum(1,5);
 // chiamo la funzione evenVsOdd per stabilire se la somma dei numeri è pari o dispari
