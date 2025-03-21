@@ -54,18 +54,36 @@ function genNum(min, max){
 }
 
 // definisco la funzione evenVsOdd per stabilire se la somma dei numeri dell'utente e del computer sono pari o dispari
+function evenVsOdd(numA, numB){
+  // variabile di controllo
+  let isEven = false;
+  // variabile per la somma
+  let sum = numA + numB;
+  console.log("Il totale è:", sum);
+  if(sum % 2 == 0 && isEven == false){
+    isEven = true;
+    console.log("E' un numero pari");
+  }
+  if(sum % 2 != 0){
+    console.log("E' un numero dispari");
+  }
+
+  return isEven;
+}
 
 // chiedo all'utente di scegliere pari o dispari
 let userChoice = prompt("Scegli pari o dispari");
 userChoice = userChoice.toLowerCase();
-console.log("Hai scelto;", userChoice);
+console.log("Hai scelto:", userChoice);
 // chiedo all'utente un numero da 1 a 5 e assegno il risultato a una variabile
 let userNum = parseInt(prompt("Inserisci un numero"));
-console.log("Hai fatto;", userNum);
+console.log("Hai fatto:", userNum);
 // chiamo la funzione genNum per i numeri da 1 a 5 e assegno il risultato a una variabile
 let pcNum = genNum(1,5);
 // chiamo la funzione evenVsOdd per stabilire se la somma dei numeri è pari o dispari
+let result = evenVsOdd(userNum, pcNum);
 // dichiaro chi ha vinto
+
 
 
 
