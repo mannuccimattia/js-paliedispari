@@ -83,7 +83,18 @@ let pcNum = genNum(1,5);
 // chiamo la funzione evenVsOdd per stabilire se la somma dei numeri è pari o dispari
 let result = evenVsOdd(userNum, pcNum);
 // dichiaro chi ha vinto
-
+if(result == true && userChoice === "pari"){
+  console.log("Hai Vinto!");
+}
+else if(result == true && userChoice === "dispari"){
+  console.log("Hai Perso!");
+}
+else if(result == false && userChoice === "dispari"){
+  console.log("Hai Vinto!");
+}
+else if(result == false && userChoice === "pari"){
+  console.log("Hai Perso!");
+}
 
 
 
